@@ -1,0 +1,11 @@
+{
+    "default0":{"text0": "I am a lovely pink!", "text1": "And you are?"},
+    "First":{"text0": "Who are you?", "text1": "I'm Mary"},
+    "Introduce":{"text0": "Hey there, My name is Mary :)", "response1":"Hi Mary, my name is Blue", "text2": "Nice to meet you, Blue."},
+    "Chocolates":{"text0": "Wow! I love chocolates. How'd you know? :)"},
+    "12:51":{"response0":"I liked to stay up until 12:51", "response1": "because that's when I think most about you"},
+    "The Day":{"response0": "Mary, the day I met you", "response1": "was the saddest day of my life", "text2": "I'm so sorry to know that, Blue.", "text3": "But it's too late now to fix everything."},
+    "Sorry, Mary":{"text0":"What happened to you? Blue.", "text1":"Tell me.", "response2":"Sorry, Mary. But it was not me."},
+    "Mary you are safe": {"response0":"Mary, do still watch the stars like the way you told me?", "response1":"the stars said you will be a lesson to me someday.", "response2":"Mary, the moon whispers, you should sleep too."},
+    "The day you said goodnight":{"response0":"If you could only know me. Like your prayers at night.", "response1":"Then everything between you and me will be alright", "text2":"Perhaps you came at the wrong time, Blue.", "text3":"I...", "text4":"I need to die.", "text5":"I have to die so that you can live again."}
+}

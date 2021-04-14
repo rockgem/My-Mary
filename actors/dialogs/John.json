@@ -1,0 +1,6 @@
+{
+    "default0": {"text0": "Hey man, how's it going?"},
+    "Met Mary": {"text0": "Oh, I see you've met Mary, huh? :D", "text1": "You want to start friendship with her?", "text2": "That's awesome. She's really friendly too."},
+    "Hi, Mary":{"text0": "Mary is cool, right?", "text1":"Gift her some chocolates she will surely appreciate it."},
+    "Way, way back":{"text0":"Man, your hands are frozen.", "response1":"I don't know if it's real.", "response2":"Frozen or not, I was not supposed to be here.", "response3":"I let my self go, now I cannot move away."}
+}

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://utils_scenes/NPCTalkArea.tscn" type="PackedScene" id=1]
+[ext_resource path="res://actors/Mary.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 20, 43 )
+
+[node name="Mary" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color( 0.99707, 0.51022, 0.976055, 1 )
+margin_left = -20.0
+margin_top = -42.0
+margin_right = 20.0
+margin_bottom = 44.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, 1 )
+shape = SubResource( 1 )
+
+[node name="NPCTalkArea" parent="." instance=ExtResource( 1 )]
+visible = false

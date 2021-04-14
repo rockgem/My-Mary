@@ -1,0 +1,706 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://actors/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://actors/Mary.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scripts/World.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Dialogbox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://images/back.png" type="Texture" id=5]
+[ext_resource path="res://actors/Circle1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/UI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://actors/Orb.tscn" type="PackedScene" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 697, 37 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "fadeToBlack"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("ParallaxBackground/back:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.137255, 0.101961, 0.101961, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "fadeToGreen"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("ParallaxBackground/back:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.121569, 0.368627, 0.141176, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("ParallaxBackground/back:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.501961, 0.156863, 0.156863, 1 ) ]
+}
+
+[node name="World" type="Node2D" groups=[
+"WorldGroup",
+]]
+script = ExtResource( 3 )
+
+[node name="Circle2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1559, 154 )
+scale = Vector2( 0.343341, 0.366293 )
+duration = 5
+
+[node name="Circle5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 92, 518 )
+scale = Vector2( 0.188046, 0.191411 )
+duration = 5
+
+[node name="Circle8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1284, 418 )
+scale = Vector2( 0.188046, 0.191411 )
+duration = 7
+
+[node name="Circle6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 827, 485 )
+scale = Vector2( 0.288872, 0.308183 )
+duration = 2
+
+[node name="Circle7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 492.875, 222.938 )
+scale = Vector2( 0.198963, 0.217385 )
+duration = 7
+
+[node name="Circle1" parent="." instance=ExtResource( 6 )]
+position = Vector2( 225, -45 )
+
+[node name="Circle3" parent="." instance=ExtResource( 6 )]
+position = Vector2( -85, 1239 )
+duration = 6
+
+[node name="Circle4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1627, 1173.25 )
+scale = Vector2( 0.663755, 0.679457 )
+duration = 2
+
+[node name="Circle17" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3731.48, 316.625 )
+scale = Vector2( 0.780532, 0.798996 )
+duration = 5
+
+[node name="Circle18" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3436, 1009 )
+scale = Vector2( 0.413766, 0.423553 )
+duration = 4
+
+[node name="Circle19" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2617, 1151 )
+scale = Vector2( 0.476768, 0.488046 )
+
+[node name="Circle12" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2278, 143 )
+scale = Vector2( 0.292576, 0.302243 )
+duration = 7
+
+[node name="Circle28" parent="." instance=ExtResource( 6 )]
+position = Vector2( 4394, 795 )
+scale = Vector2( 0.353712, 0.340023 )
+duration = 6
+
+[node name="Circle29" parent="." instance=ExtResource( 6 )]
+position = Vector2( 4118, 1403 )
+scale = Vector2( 0.815502, 0.783943 )
+duration = 7
+
+[node name="Circle13" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1987, 400 )
+scale = Vector2( 0.204149, 0.225206 )
+duration = 2
+
+[node name="Circle14" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2479, 564 )
+scale = Vector2( 0.204149, 0.225206 )
+duration = 4
+
+[node name="Circle15" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2640.23, 275.313 )
+scale = Vector2( 0.104215, 0.114964 )
+duration = 5
+
+[node name="Circle16" parent="." instance=ExtResource( 6 )]
+position = Vector2( 2882.58, 90.8126 )
+scale = Vector2( 0.120268, 0.132674 )
+duration = 4
+
+[node name="Circle9" parent="." instance=ExtResource( 6 )]
+position = Vector2( 737, 1236.13 )
+scale = Vector2( 0.244541, 0.25 )
+duration = 1
+
+[node name="Circle10" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1137, 1097 )
+scale = Vector2( 0.244541, 0.25 )
+duration = 4
+
+[node name="Circle11" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1108, 1517 )
+scale = Vector2( 0.378821, 0.398908 )
+duration = 5
+
+[node name="Circle20" parent="." instance=ExtResource( 6 )]
+position = Vector2( -924.187, 622.766 )
+scale = Vector2( 0.274095, 0.288629 )
+
+[node name="Circle25" parent="." instance=ExtResource( 6 )]
+position = Vector2( -561, 405 )
+scale = Vector2( 0.197031, 0.207479 )
+moveSpeed = 60
+duration = 4
+
+[node name="Circle21" parent="." instance=ExtResource( 6 )]
+position = Vector2( -2050, 152 )
+scale = Vector2( 0.54318, 0.571982 )
+duration = 6
+
+[node name="Circle26" parent="." instance=ExtResource( 6 )]
+position = Vector2( -2005.79, 1176.94 )
+scale = Vector2( 0.724418, 0.76283 )
+duration = 8
+
+[node name="Circle22" parent="." instance=ExtResource( 6 )]
+position = Vector2( -1316.77, 75.3828 )
+scale = Vector2( 0.364648, 0.383984 )
+duration = 5
+
+[node name="Circle24" parent="." instance=ExtResource( 6 )]
+position = Vector2( -1551, 368 )
+scale = Vector2( 0.193536, 0.203798 )
+duration = 8
+
+[node name="Circle27" parent="." instance=ExtResource( 6 )]
+position = Vector2( -1211, 1312 )
+scale = Vector2( 0.193536, 0.203798 )
+moveSpeed = 40
+duration = 5
+
+[node name="Circle23" parent="." instance=ExtResource( 6 )]
+position = Vector2( -2208, 649 )
+scale = Vector2( 0.119538, 0.125876 )
+duration = 7
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" parent="CanvasLayer" instance=ExtResource( 7 )]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 520, 708 )
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 1910, 782 )
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D2"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2( -415, 978 )
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D3"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D15" type="StaticBody2D" parent="."]
+position = Vector2( 352, 1143 )
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D15"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D15"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D18" type="StaticBody2D" parent="."]
+position = Vector2( 1726, 1143 )
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D18"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D18"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D19" type="StaticBody2D" parent="."]
+position = Vector2( 3096, 1143 )
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D19"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D19"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D20" type="StaticBody2D" parent="."]
+position = Vector2( 3924, 1143 )
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D20"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D20"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D16" type="StaticBody2D" parent="."]
+position = Vector2( -1034, 1143 )
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D16"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D16"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D17" type="StaticBody2D" parent="."]
+position = Vector2( -1879, 1143 )
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D17"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D17"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D12" type="StaticBody2D" parent="."]
+position = Vector2( -1814, 853 )
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D12"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D12"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D13" type="StaticBody2D" parent="."]
+position = Vector2( -2537, 687 )
+rotation = 1.5708
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D13"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D13"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D14" type="StaticBody2D" parent="."]
+position = Vector2( 4617, 611 )
+rotation = 1.5708
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D14"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D14"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D11" type="StaticBody2D" parent="."]
+position = Vector2( 2383, 396 )
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D11"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D11"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="."]
+position = Vector2( 1089, 977 )
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D4"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="."]
+position = Vector2( 1896, 977 )
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D5"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D5"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D6" type="StaticBody2D" parent="."]
+position = Vector2( 2493, 977 )
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D6"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D7" type="StaticBody2D" parent="."]
+position = Vector2( 3432, 857 )
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D7"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D7"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D8" type="StaticBody2D" parent="."]
+position = Vector2( 3464, 667 )
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D8"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D8"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D9" type="StaticBody2D" parent="."]
+position = Vector2( 3676, 596 )
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D9"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D9"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StaticBody2D10" type="StaticBody2D" parent="."]
+position = Vector2( 3887, 528 )
+collision_layer = 4
+collision_mask = 3
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D10"]
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D10"]
+margin_left = -695.0
+margin_top = -37.0
+margin_right = 697.0
+margin_bottom = 37.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogbox" parent="." instance=ExtResource( 4 )]
+visible = false
+margin_left = 386.0
+margin_top = 422.0
+margin_right = 672.0
+margin_bottom = 546.0
+
+[node name="RichTextLabel" parent="Dialogbox" index="0"]
+margin_left = 8.0
+margin_top = 15.0
+margin_right = -8.0
+margin_bottom = -8.0
+
+[node name="NPCNamePanel" parent="Dialogbox" index="1"]
+margin_left = 54.0
+margin_top = -18.0
+margin_right = 141.0
+margin_bottom = 10.0
+
+[node name="NPCName" parent="Dialogbox/NPCNamePanel" index="0"]
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="Mary" parent="." instance=ExtResource( 2 )]
+position = Vector2( 486, 627 )
+
+[node name="John" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.992157, 0.419608, 0.419608, 1 )
+position = Vector2( 1727, 701 )
+
+[node name="Gerome" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.329412, 0.980392, 0.32549, 1 )
+position = Vector2( -642, 897 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 869, 624 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="back" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 722, 319 )
+scale = Vector2( 0.864844, 0.787037 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Orb" parent="." instance=ExtResource( 8 )]
+modulate = Color( 0.227451, 0.270588, 0.917647, 1 )
+position = Vector2( 2249, 694 )
+key = "Chocolates"
+
+[node name="Orb2" parent="." instance=ExtResource( 8 )]
+modulate = Color( 0.227451, 0.270588, 0.917647, 1 )
+position = Vector2( 980, 893 )
+key = "12:51"
+
+[node name="Orb3" parent="." instance=ExtResource( 8 )]
+modulate = Color( 0.227451, 0.270588, 0.917647, 1 )
+position = Vector2( 4483, 443 )
+key = "The Day"
+
+[node name="Orb4" parent="." instance=ExtResource( 8 )]
+modulate = Color( 0.952941, 0.2, 0.2, 1 )
+position = Vector2( -1053, 897 )
+key = "Way, way back"
+
+[node name="Orb5" parent="." instance=ExtResource( 8 )]
+modulate = Color( 0.227451, 0.270588, 0.917647, 1 )
+position = Vector2( -1795, 768 )
+key = "Sorry, Mary"
+
+[node name="Orb6" parent="." instance=ExtResource( 8 )]
+modulate = Color( 0.545098, 0.921569, 0.490196, 1 )
+position = Vector2( 3087, 761 )
+key = "I was not me"
+
+[node name="Orb7" parent="." instance=ExtResource( 8 )]
+modulate = Color( 0.227451, 0.270588, 0.917647, 1 )
+position = Vector2( 2846, 303 )
+key = "Mary you are safe"
+
+[node name="Orb8" parent="." instance=ExtResource( 8 )]
+modulate = Color( 0.227451, 0.270588, 0.917647, 1 )
+position = Vector2( 4459, 1020 )
+key = "The day you said goodnight"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/fadeToBlack = SubResource( 2 )
+anims/fadeToGreen = SubResource( 3 )
+anims/fadeToRed = SubResource( 4 )
+
+[editable path="Dialogbox"]

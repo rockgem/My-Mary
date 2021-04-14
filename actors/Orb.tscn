@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/Orb.gd" type="Script" id=1]
+[ext_resource path="res://images/circle1.png" type="Texture" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 40.4969
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 79, 70 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "orbAcquire"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.90735e-06, 1 ), Vector2( 4, -237 ), Vector2( 1, 22 ) ]
+}
+
+[node name="Orb" type="KinematicBody2D"]
+collision_layer = 8
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1.90735e-06, 1 )
+scale = Vector2( 0.133264, 0.133264 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/orbAcquire = SubResource( 3 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
