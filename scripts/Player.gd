@@ -21,6 +21,8 @@ func _physics_process(delta):
 	
 	velocity.y += gravity
 	
+	print(velocity.y)
+	
 	if Input.is_action_just_pressed("ui_up") && !jumping:
 		velocity.y = -jumpForce
 	if Input.is_action_pressed("ui_left"):
